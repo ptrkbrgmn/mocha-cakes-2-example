@@ -1,11 +1,16 @@
 
+# mocha-cakes-2-example
 ## How to ##
+Install node et.al, example:
+https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/
 ```sh
-mkdir mocha-cakes-2-test
+mkdir mocha-cakes-2-example
 cd mocha-cakes-2-tests
 npm init
 npm install chai chai-as-promised eslint mocha mocha-cakes-2 supertest express --save-dev
 ```
+
+## Good to know ##
 
 #### --save-dev ####
 If someone is planning on downloading and using your module in their program, then they probably don't want or need to download and build the external test or documentation framework that you use.
