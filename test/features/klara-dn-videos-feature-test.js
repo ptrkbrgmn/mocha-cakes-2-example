@@ -5,7 +5,7 @@ const jsonFile = require("jsonfile");
 function doCleanup() {
   console.log("Cleaning up");
   request("http://es-content.dev.bonnier.news:9200")
-    .delete("/klara1/klara/dn.screen9.1uwHxJLDuuBKBHGHQcissw/")
+    .delete("/klara/klara/dn.screen9.1uwHxJLDuuBKBHGHQcissw/")
     .expect(200 || 404)
     .end((err, res) => {
       if (err) throw err;
@@ -27,7 +27,7 @@ Feature("Videos", () => {
         .send(videoEpiJson)
         .set("Content-Type", "application/json")
         .set("Accept", "application/json")
-        .expect(200 || 201)
+        .expect(201)
         .end((err, res) => {
           if (err) return done(err);
           done();

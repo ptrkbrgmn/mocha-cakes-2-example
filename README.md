@@ -6,7 +6,7 @@ Example:
 https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/
 
 ## Setup test fixture ##
-In nav project run existing Groovy tests to get docker containers with ElasticSearch, Redis and nav-klara-dn up and running:
+In nav project comment out existing Groovy tests mvn execution in `.run.sh`, and then it to start containers with ElasticSearch, Redis and nav-klara-dx up and running:
 ```sh
 ./integration-test/nav-klara-it/run.sh
 ```
