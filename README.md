@@ -1,12 +1,14 @@
 
 # mocha-cakes-2-example
+I have used Atom https://atom.io/. We could also use IntelliJ Ultimate.
+
 ## Prerequisites ##
 Install node and npm  
 Example:
 https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/
 
 ## Setup test fixture ##
-In nav project comment out existing Groovy tests mvn execution in `.run.sh`, and then it to start containers with ElasticSearch, Redis and nav-klara-dx up and running:
+In nav project comment out existing Groovy tests mvn execution in script `.run.sh`, and then it to start containers with ElasticSearch, Redis and nav-klara-dx up and running:
 ```sh
 ./integration-test/nav-klara-it/run.sh
 ```
@@ -30,6 +32,7 @@ Cleaning up
 #### --save-dev ####
 If someone is planning on downloading and using your module in their program, then they probably don't want or need to download and build the external test or documentation framework that you use.
 
+#### package-lock ####
 `package-lock.json` is automatically generated for any operations where npm modifies either the node_modules tree, or package.json. It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
 
 #### ESLint ####
