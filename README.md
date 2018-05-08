@@ -1,13 +1,28 @@
 
 # mocha-cakes-2-example
-## How to ##
-Install node et.al, example:
+## Prerequisites ##
+Install node and npm  
+Example:
 https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/
+
+## Setup test fixture ##
+In nav project run existing Groovy tests to get docker containers with ElasticSearch, Redis and nav-klara-dn up and running:
 ```sh
-mkdir mocha-cakes-2-example
-cd mocha-cakes-2-tests
-npm init
-npm install chai chai-as-promised eslint mocha mocha-cakes-2 supertest express --save-dev
+./integration-test/nav-klara-it/run.sh
+```
+
+## Run test ##
+```sh
+$ npm test
+
+  Feature: Videos
+    Scenario: Fetch a single video
+      ✓ Given there is a video added to elasticsearch
+      ✓ When fetching a video with id dn.screen9.1uwHxJLDuuBKBHGHQcissw/ from nav-klara-dn
+      ✓ Then response should contain the right data
+Cleaning up
+
+  3 passing (52ms)
 ```
 
 ## Good to know ##
@@ -22,30 +37,12 @@ ESLint is an open source JavaScript linting utility. Code linting is a type of s
 
 JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like ESLint allow developers to discover problems with their JavaScript code without executing it.
 
-Installation:
-```sh
-npm install eslint --save-dev
-```
-
-Initialize:
-```sh
-./node_modules/.bin/eslint --init
-```
-
-On question 'which files'? provide `/Users/patrik.bergman/integration-test/nav-klara-it`
-
-Run ESlint:
-```sh
-./node_modules/.bin/eslint /Users/patrik.bergman/integration-test/nav-klara-it
-```
-
 #### Debugging ####
-Debug mocha Tests
+Debug mocha tests in Chrome:
 ```sh
 node --inspect-brk $(npm bin)/_mocha --timeout=0
 ```
 https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
-
 
 #### Misc ####
 ##### Atom #####
