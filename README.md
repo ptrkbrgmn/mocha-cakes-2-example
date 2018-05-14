@@ -8,11 +8,11 @@ Example:
 https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/
 
 ## Test case ##
-Given there is a video added to ElasticSearch with id 'dn.screen9.1uwHxJLDuuBKBHGHQcissw'
-    
-When fetching a video with id 'dn.screen9.1uwHxJLDuuBKBHGHQcissw' using Klaras REST API  
-  
-Then response should contain the right json data  
+Acceptance test of for fetching a single video from Klaras REST API:   
+ 
+<b>Given</b> there is a video added to ElasticSearch with id 'dn.screen9.1uwHxJLDuuBKBHGHQcissw'  
+<b>When</b> fetching a video with id 'dn.screen9.1uwHxJLDuuBKBHGHQcissw'  
+<b>Then</b> response should contain the right json body  
 
 ```json
 {
@@ -33,6 +33,8 @@ Then response should contain the right json data
   "sentToTranscodeAt" : "2017-11-07T14:38:12.000+01:00",
   "status" : "published"
 }
+```
+
 ```
 
 ## Setup test fixture ##
