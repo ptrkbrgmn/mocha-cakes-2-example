@@ -35,8 +35,6 @@ Acceptance test of for fetching a single video from Klaras REST API:
 }
 ```
 
-```
-
 ## Setup test fixture ##
 In nav project comment out existing Groovy tests mvn execution in script `.run.sh`, and then it to start containers with ElasticSearch, Redis and nav-klara-dx up and running:
 ```sh
