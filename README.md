@@ -1,11 +1,39 @@
 
-# mocha-cakes-2-example
+# mocha-cakes-2 example
 I have used Atom https://atom.io/. We could also use IntelliJ Ultimate.
 
 ## Prerequisites ##
 Install node and npm  
 Example:
 https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/
+
+## Test case ##
+Given there is a video added to ElasticSearch with id 'dn.screen9.1uwHxJLDuuBKBHGHQcissw'
+    
+When fetching a video with id 'dn.screen9.1uwHxJLDuuBKBHGHQcissw' using Klaras REST API  
+  
+Then response should contain the right json data  
+
+```json
+{
+  "id" : "dn.screen9.1uwHxJLDuuBKBHGHQcissw",
+  "fileName" : "20171107-arbogany-1053_NormalHires.mp4",
+  "title" : "Grafikfilm: Arbogamorden  (uppdaterad för hovrätten)",
+  "description" : "Huvudpersonerna och händelserna som ledde fram till rättegången och dom mot den 42:åriga kvinnan och hennes pojkvän. Nu prövas målet i Svea Hovrätt",
+  "streamUrl" : "https://video-cdn.dn.se/M/V/1/u/1uwHxJLDuuBKBHGHQcissw_360p_h264h.mp4?v=1&token=0ed558211ccafe3db4784",
+  "thumbnails" : {
+    "small" : "https://csp.screen9.com/img/1/u/w/H/thumb_1uwHxJLDuuBKBHGHQcissw/8.jpg",
+    "large" : "https://csp.screen9.com/img/1/u/w/H/image_1uwHxJLDuuBKBHGHQcissw/8.jpg"
+  },
+  "duration" : "PT1M36.28S",
+  "publishedAt" : null,
+  "createdAt" : "2017-11-07T14:36:46.000+01:00",
+  "createdBy" : null,
+  "transcodeStatus" : "done",
+  "sentToTranscodeAt" : "2017-11-07T14:38:12.000+01:00",
+  "status" : "published"
+}
+```
 
 ## Setup test fixture ##
 In nav project comment out existing Groovy tests mvn execution in script `.run.sh`, and then it to start containers with ElasticSearch, Redis and nav-klara-dx up and running:
