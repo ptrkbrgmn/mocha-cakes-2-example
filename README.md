@@ -44,7 +44,10 @@ In nav project comment out existing Groovy tests mvn execution in script `.run.s
 ## Run test ##
 ```sh
 $ npm test
+```
 
+## Test Success Output
+```sh
   Feature: Videos
     Scenario: Fetch a single video
       ✓ Given there is a video added to elasticsearch
@@ -54,6 +57,61 @@ Cleaning up
 
   3 passing (52ms)
 ```
+
+## Test Failure Output
+```sh
+  Feature: Videos
+    Scenario: Fetch a single video
+      ✓ Given there is a video added to elasticsearch
+      ✓ When fetching a video with id dn.screen9.1uwHxJLDuuBKBHGHQcissw/ from nav-klara-dn
+      1) Then response should contain the right data
+Cleaning up
+
+
+  2 passing (61ms)
+  1 failing
+
+  1) Feature: Videos
+       Scenario: Fetch a single video
+         Then response should contain the right data:
+
+      AssertionError: expected { id: 'dn.screen9.1uwHxJLDuuBKBHGHQcissw',...,status: 'published' } 
+      to deeply equal { id: 'dn.screen9.1uwHxJLDuuBKBHGHQcissw',...,
+  status: 'publishedxx' }
+      + expected - actual
+
+         "fileName": "20171107-arbogany-1053_NormalHires.mp4"
+         "id": "dn.screen9.1uwHxJLDuuBKBHGHQcissw"
+         "publishedAt": [null]
+         "sentToTranscodeAt": "2017-11-07T14:38:12.000+01:00"
+      -  "status": "published"
+      +  "status": "publishedxx"
+         "streamUrl": "https://video-cdn.dn.se/M/V/1/u/1uwHxJLDuuBKBHGHQcissw_360p_h264h.mp4?v=1&token=0ed558211ccafe3db4784"
+         "thumbnails": {
+           "large": "https://csp.screen9.com/img/1/u/w/H/image_1uwHxJLDuuBKBHGHQcissw/8.jpg"
+           "small": "https://csp.screen9.com/img/1/u/w/H/thumb_1uwHxJLDuuBKBHGHQcissw/8.jpg"
+
+      at Proxy.assertEql (node_modules/chai/lib/chai/core/assertions.js:1080:10)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at doAsserterAsyncAndAddThen (node_modules/chai-as-promised/lib/chai-as-promised.js:289:22)
+      at Proxy.<anonymous> (node_modules/chai-as-promised/lib/chai-as-promised.js:255:20)
+      at Proxy.overwritingMethodWrapper (node_modules/chai/lib/chai/utils/overwriteMethod.js:78:33)
+      at Context.Then (test/features/klara-dn-videos-feature-test.js:51:23)
+
+
+
+npm ERR! Test failed.  See above for more details.
+```
+
+### Pros
++ Very fast (below 100 ms compared to more than 1 second for ScalaTest)
++ Nice output
+ 
+### Cons
+- Can be run by IntelliJ Standard Edition, need Ultimate
+- Verbose output on error
+- Not very intuitive error message when host unavailable
+
 
 ## Good to know ##
 
