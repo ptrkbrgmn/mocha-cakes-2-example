@@ -20,7 +20,7 @@ Feature("Videos", () => {
 
   Scenario("Fetch a single video", () => {
 
-    Given("there is a video added to elasticsearch", (done) => {
+    Given("there is a video added to elasticsearch with id dn.screen9.1uwHxJLDuuBKBHGHQcissw", (done) => {
       const videoEpiJson = jsonFile.readFileSync("test/features/resources/es-dn.screen9.1uwHxJLDuuBKBHGHQcissw.json");
       request("http://es-content.dev.bonnier.news:9200")
         .post("/klara1/klara/dn.screen9.1uwHxJLDuuBKBHGHQcissw/")
@@ -35,7 +35,7 @@ Feature("Videos", () => {
     });
 
     let response;
-    When("fetching a video with id dn.screen9.1uwHxJLDuuBKBHGHQcissw/ from nav-klara-dn", (done) => {
+    When("fetching a video with id dn.screen9.1uwHxJLDuuBKBHGHQcissw", (done) => {
       request("http://nav-klara-dn.dev.internal.bonnier.news")
         .get("/videos/dn.screen9.1uwHxJLDuuBKBHGHQcissw")
         .expect(200)
