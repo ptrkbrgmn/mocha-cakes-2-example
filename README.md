@@ -1,5 +1,10 @@
 
 # mocha-cakes-2 example
+
+## Resources
+https://github.com/iensu/mocha-cakes-2  
+https://github.com/visionmedia/supertest
+
 I have used Atom https://atom.io/. We could also use IntelliJ Ultimate.
 
 ## Prerequisites ##
