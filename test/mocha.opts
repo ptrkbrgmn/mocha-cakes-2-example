@@ -2,3 +2,4 @@
 --reporter spec
 --recursive
 --ui mocha-cakes-2
+--require ./test/setup.js

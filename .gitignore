@@ -110,6 +110,8 @@ typings/
 # dotenv environment variables file
 .env
 
+.vscode/
+
 # next.js build output
 .next
 /.idea/
@@ -117,4 +119,4 @@ typings/
 /package-lock.json
 /.DS_Store
 /nav-klara-it.iml
-!/node_modules/
+/node_modules/
