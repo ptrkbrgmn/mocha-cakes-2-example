@@ -117,6 +117,7 @@ npm ERR! Test failed.  See above for more details.
 - Can be run by IntelliJ Standard Edition, need Ultimate, still not working though
 - Verbose output on error
 - Not very intuitive error message when host unavailable
+- Not very much information on the web when googling on errors?
 
 
 ## Good to know ##
