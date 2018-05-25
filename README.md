@@ -110,10 +110,11 @@ npm ERR! Test failed.  See above for more details.
 
 ### Pros
 + Very fast (below 100 ms compared to more than 1 second for ScalaTest)
-+ Nice output
++ Very nice output
++ Good to have knowledge about node and javascript when communicating with BN web developers
  
 ### Cons
-- Can be run by IntelliJ Standard Edition, need Ultimate
+- Can be run by IntelliJ Standard Edition, need Ultimate, still not working though
 - Verbose output on error
 - Not very intuitive error message when host unavailable
 
