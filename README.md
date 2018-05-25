@@ -132,10 +132,16 @@ ESLint is an open source JavaScript linting utility. Code linting is a type of s
 JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like ESLint allow developers to discover problems with their JavaScript code without executing it.
 
 #### Debugging ####
-Debug mocha tests in Chrome:
+To debug mocha tests in Chrome:  
+Open Chrome DevTools inspect page by entering `about:inspect` in Chrome address bar 
+Start tests by running the following command in project root folder
 ```sh
 node --inspect-brk $(npm bin)/_mocha --timeout=0
 ```
+To open Chrome Dev Tools klick on the inspect link showing in Chrome web page
+
+https://nodejs.org/en/docs/guides/debugging-getting-started/
+https://developers.google.com/web/tools/chrome-devtools/?utm_source=dcc&utm_medium=redirect&utm_campaign=2018Q2
 https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
 
 #### Misc ####

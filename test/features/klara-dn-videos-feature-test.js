@@ -21,6 +21,7 @@ Feature("Videos", () => {
   Scenario("Fetch a single video", () => {
 
     Given("there is a video added to elasticsearch with id dn.screen9.1uwHxJLDuuBKBHGHQcissw", (done) => {
+      debugger;
       const videoEpiJson = jsonFile.readFileSync("test/features/resources/es-dn.screen9.1uwHxJLDuuBKBHGHQcissw.json");
       request("http://es-content.dev.bonnier.news:9200")
         .post("/klara1/klara/dn.screen9.1uwHxJLDuuBKBHGHQcissw/")
